@@ -1,0 +1,24 @@
+
+body {
+	position: relative;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    font-size: 25px;
+    margin: 10px;
+}
+.test1 {
+    width: 33%;
+    border: 0.5px solid black;
+}
+section {
+    display: inline-block;
+}
+
+
+
+/* relative, absolute, flex - 3 HTML pages .. One page showing three rows positioned in 3 ways */

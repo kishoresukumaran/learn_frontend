@@ -1,0 +1,207 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .2);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.companyTitle {
+    font-size: 1.5rem;
+}
+
+.reachOut {
+    font-size: .80rem;
+}  
+
+.mainMenu {
+    list-style-type: none;  
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+.mainMenu ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.mainMenu ul li a:hover {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10%;
+}
+
+.mainMenu ul li label:hover {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10%;
+
+}
+
+.propertiesSublist {
+    display: none;
+}
+
+.newsSublist {
+    display: none;
+}
+
+.last3monthsSublist {
+    display: none;
+}
+.previousyearsSublist {
+    display: none;
+}
+
+.contactSublist {
+    display: none;
+}
+
+.servicesSublist {
+    display: none;
+}
+
+.aboutSublist {
+    display: none;
+}
+
+.propertiesOthersSublist {
+    display: none;
+}
+
+/* ---------- Properties Sublist ---------- */
+
+.mainMenu ul li:hover .propertiesSublist {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.mainMenu ul li:hover .propertiesSublist ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.mainMenu ul li:hover .propertiesSublist ul li {
+    display: block;
+    padding: 10px;
+}
+
+/* ------------- News Sublist ------------- */
+
+.mainMenu ul li:hover .newsSublist {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 210px;
+}
+
+.mainMenu ul li:hover .newsSublist ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.mainMenu ul li:hover .newsSublist ul li {
+    display: block;
+    padding: 10px;
+}
+
+/* --------- Contacts Sublist -------------- */
+
+.mainMenu ul li:hover .contactSublist {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 380px;
+}
+
+.mainMenu ul li:hover .contactSublist ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.mainMenu ul li:hover .contactSublist ul li {
+    display: block;
+    padding: 10px;
+}
+
+/* ------ Services Sublist ----------- */
+
+.mainMenu ul li:hover .servicesSublist {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+.mainMenu ul li:hover .servicesSublist ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.mainMenu ul li:hover .servicesSublist ul li {
+    display: block;
+    padding: 10px;
+}
+
+/* ------------- About Sublist ----------- */
+
+.mainMenu ul li:hover .aboutSublist {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 290px;
+}
+
+.mainMenu ul li:hover .aboutSublist ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.mainMenu ul li:hover .aboutSublist ul li {
+    display: block;
+    padding: 10px;
+}
+
+/*  -------- properties Others Sublist ------ */
+
+.propertiesSublist ul li:hover .propertiesOthersSublist {
+    display: block;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 95px;
+}
+
+.propertiesSublist ul li:hover .propertiesOthersSublist  ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+} 
+
+.propertiesSublist ul li:hover .propertiesOthersSublist  ul li {
+    display: block;
+    padding: 10px;
+}
+
+/* --------- News Last 3 months sublist ----------- */
+
+.newsSublist ul li:hover .last3monthsSublist {
+    display: block;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 154px;
+}

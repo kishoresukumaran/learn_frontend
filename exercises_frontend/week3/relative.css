@@ -1,7 +1,4 @@
 
-body {
-	position: relative;
-}
 
 h1 {
     font-size: 30px;
@@ -11,13 +8,14 @@ h2 {
     font-size: 25px;
     margin: 10px;
 }
-.test1 {
-    width: 33%;
-    border: 0.5px solid black;
-}
 section {
-    display: inline-block;
+	position: relative;
+	margin: 5px;
+	width: calc(100%/3 - 15px);
+    border: 0.5px solid black;
+	display: inline-block;
 }
+
 
 
 

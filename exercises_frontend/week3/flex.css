@@ -1,8 +1,8 @@
-
+/* 
 body {
 	display: flex
     flex-direction: column;
-}
+} */
 
 h1 {
     font-size: 30px;
@@ -12,13 +12,19 @@ h2 {
     font-size: 25px;
     margin: 10px;
 }
-.test1 {
-    width: 33%;
+
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+section {
+    flex: 1;
+    margin: 5px;
     border: 0.5px solid black;
 }
-section {
-    display: inline-block;
-}
+
 
 
 

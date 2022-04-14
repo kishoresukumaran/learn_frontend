@@ -1,6 +1,4 @@
-body {
-    position:absolute;
-}
+
 
 h1 {
     font-size: 30px;
@@ -11,13 +9,35 @@ h2 {
     margin: 10px;
 }
 
-.test1 {
-    width: 33%;
-    border: 0.5px solid black;
-}
 section {
+    position: absolute;
+    width: calc(100%/3 -  20px);
+    border: 0.5px solid black;
     display: inline-block;
 }
+
+section:nth-of-type(2) {
+    left: calc(100%/3 + 10px);
+}
+
+section:nth-of-type(3) {
+    left: calc(2 * (100%/3 + 5px));
+}
+
+
+/* .test2 {
+    position: absolute;
+    left: 605px;
+    width: 65vh;
+    border: 0.5px solid black;
+}
+.test3 {
+    position: absolute;
+    width: 65vh;
+    left: 1200px;
+    border: 0.5px solid black;
+} */
+
 
 
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>HTML5 Audio Example</title>
+</head>
+
+<body>
+    <h1>Simple Audio Example</h1>
+    <h2>mp3 format</h2>
+    <audio src="Test.mp3" controls></audio>
+    <p><label>date: <input type="date" name="date"> </label></p>
+    <label for="email" class="required">E-mail:</label> <input type="text" name="email" id="email" required
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*\.(\w{2}|(com|net|org|edu|i nt|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$"
+        title="E-mail format required">
+
+    <label>Search:<input type="search" name="query" id="searchBox" autofocus></label>
+    <menu type="toolbar" id="fileMenu" label="File">
+        <li><a href="javascript:newItem();">New</a></li>
+        <li><a href="javascript:openItem();">Open</a></li>
+        <li><a href="javascript:closeItem();">Close</a></li>
+        <hr>
+        <li><a href="javascript:saveItem();">Save</a></li>
+        <li><a href="javascript:saveAsItem();">Save as...</a></li>
+        <hr>
+        <li><a href="javascript:exitApp();">Exit</a></li>
+    </menu>
+
+    <menu type="context" id="simpleMenu">
+        <li><a href="javascript:add();">Add</a></li>
+        <li><a href="javascript:edit();">Edit</a></li>
+        <li><a href="javascript:delete();">Delete</a></li>
+    </menu>
+    <div contextmenu="simpleMenu">Widget</div>
+
+    <menu type="command" label="Main Menu">
+        <command type="command" label="Add" icon="add.png">
+            <command type="command" label="Edit" icon="edit.png">
+                <command type="command" label="Delete" icon="delete.png">
+                    <hr>
+                    <menu type="command" label="Skin" id="skinMenu">
+                        <command type="radio" radiogroup="skin" label="Classic">
+                            <command type="radio" radiogroup="skin" label="Modern" checked>
+                                <command type="radio" radiogroup="skin" label="Neo">
+                    </menu>
+                    <hr>
+                    <command type="checkbox" label="Secure Mode">
+    </menu>
+    <p>Warp Drive Output: <meter min="0" max="10" low="3" optimum="7" high="9" value="3"
+            title="Captain she can't take much more of this!"></meter></p>
+    <p>Progress: <progress id="progressBar" max="100.00" value="33.1"> 33.1%</progress></p>
+
+    <div id="dragme" class="box" draggable="true">I am a draggable div</div>
+    <p contenteditable="true" spellcheck="true">This paragraph of text is editable. Click it and you will see. Of course
+        there is no sense
+        of saving it with code to transmit the information to the server. This paragraph of text is editable. Click it
+        and you will see. Of course there is no sense of saving it with code to transmit the information to the server.
+    </p>
+
+    <p ondblclick="this.contentEditable=true;this.className='inEdit';"
+        onblur="this.contentEditable=false;this.className='';">This paragraph uses some simple script to be editable.
+        Double-click the text to begin editing.</p>
+
+    <p spellcheck="true">Spellcheck on: There is a tyyypooo here. Did the browser spot it?</p>
+
+    <p>
+        <!-- The Kanji for Japanese language with the romanji above it or within parens for non ruby aware browsers -->
+        <ruby> 日本語 <rp>(</rp>
+            <rt>nihongo</rt>
+            <rp>)</rp>
+        </ruby>
+    </p>
+
+    (Page 116).
+</body>
+
+</html>

@@ -1,81 +1,218 @@
-*, *::after, *::before {
+:root {
+    --propertiesSublistMarginTop: 19px;
+    --propertiesSublistMarginLeft: -13px;
+}
+
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: sans-serif;
     padding: 0;
+    font-family: sans-serif;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, .2);
-    height: 80px;
+.logo {
+    border-radius: 20%;
+    margin-left: -10px;
+}
+
+.socialSection {
+    display: flex;
+    margin-right: 15px;
+}
+
+.social {
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.moreButton {
+    display: flex;
+    float: right;
+}
+
+.socialSection a {
+    text-decoration: none;
+    color: black;
+}
+
+.servicesForm,
+.aboutForm {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
 }
 
-.companyTitle {
-    font-size: 1.5rem;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.reachOut {
-    font-size: .80rem;
-}  
+@media only screen and (max-width: 600px) {
+    .mainMenu {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, .2);
+        display: flex;
+        align-items: center;
+    }
+
+    .companyTitle {
+        font-size: 1.5rem;
+    }
+
+    .toggle-button {
+        margin-top: 20px;
+    }
+
+    .socialSection {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .mainMenu {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, .2);
+        display: flex;
+        align-items: center;
+    }
+
+    .companyTitle {
+        font-size: 1.5rem;
+    }
+
+    .toggle-button {
+        margin-top: 20px;
+    }
+
+    .socialSection {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .mainMenu {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, .2);
+        display: flex;
+        align-items: center;
+    }
+
+    .companyTitle {
+        font-size: 1.5rem;
+    }
+
+    .toggle-button {
+        margin-top: 20px;
+    }
+
+    .socialSection {
+        display: block;
+        margin-left: 120px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1003px) {
+
+    .navbar {
+        background-color: rgba(0, 0, 0, .2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .companyTitle {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .mainMenu {
+        font-size: 1rem;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .mainMenu {
+        display: block;
+    }
+
+    .lineBreak {
+        display: none;
+    }
+}
 
 .mainMenu {
-    list-style-type: none;  
-    padding: 0;
+    margin-bottom: -10px;
 }
 
-li {
-    display: inline;
+.mainMenu ul {
+    margin: 3px;
+    margin-bottom: -12px;
 }
 
-.mainMenu ul li a {
+.mainMenu ul li {
+    display: inline-block;
     text-decoration: none;
     color: black;
     padding: 10px 12px;
     text-align: center;
 }
 
-.mainMenu ul li a:hover {
+.active {
     background-color: rgba(0, 0, 0, .5);
     border-radius: 10%;
 }
 
-.mainMenu ul li label:hover {
+.mainMenu ul li:hover {
     background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
     border-radius: 10%;
-
+    transition: all 0.4s ease-in;
 }
 
-.propertiesSublist {
-    display: none;
+.toggle-button {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
 
-.newsSublist {
-    display: none;
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
 }
 
-.last3monthsSublist {
-    display: none;
-}
-.previousyearsSublist {
-    display: none;
-}
-
+.propertiesSublist,
+.servicesSublist,
+.newsSublist,
+.last3monthsSublist,
+.previousyearsSublist,
+.aboutSublist,
 .contactSublist {
-    display: none;
-}
-
-.servicesSublist {
-    display: none;
-}
-
-.aboutSublist {
     display: none;
 }
 
@@ -88,54 +225,36 @@ li {
 .mainMenu ul li:hover .propertiesSublist {
     display: block;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 40px;
 }
 
 .mainMenu ul li:hover .propertiesSublist ul {
-    margin-top: 20px;
+    margin-top: var(--propertiesSublistMarginTop);
+    margin-left: var(--propertiesSublistMarginLeft);
     background-color: rgba(0, 0, 0, .2);
+    width: 100px;
 }
 
 .mainMenu ul li:hover .propertiesSublist ul li {
     display: block;
     padding: 10px;
+    margin-left: -40px;
 }
 
-/* ------------- News Sublist ------------- */
+/*  -------- properties Others Sublist ------ */
 
-.mainMenu ul li:hover .newsSublist {
+.propertiesSublist ul li:hover .propertiesOthersSublist {
     display: block;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 210px;
+    margin-left: calc(var(--propertiesSublistMarginLeft) + 116px);
+    margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
 }
 
-.mainMenu ul li:hover .newsSublist ul {
+.propertiesSublist ul li:hover .propertiesOthersSublist ul {
     margin-top: 20px;
     background-color: rgba(0, 0, 0, .2);
 }
 
-.mainMenu ul li:hover .newsSublist ul li {
-    display: block;
-    padding: 10px;
-}
-
-/* --------- Contacts Sublist -------------- */
-
-.mainMenu ul li:hover .contactSublist {
-    display: block;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 380px;
-}
-
-.mainMenu ul li:hover .contactSublist ul {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .2);
-}
-
-.mainMenu ul li:hover .contactSublist ul li {
+.propertiesSublist ul li:hover .propertiesOthersSublist ul li {
     display: block;
     padding: 10px;
 }
@@ -145,8 +264,8 @@ li {
 .mainMenu ul li:hover .servicesSublist {
     display: block;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 130px;
+    margin-left: calc(var(--propertiesSublistMarginLeft) - 60px);
+    margin-top: calc(var(--propertiesSublistMarginTop) - 20px);
 }
 
 .mainMenu ul li:hover .servicesSublist ul {
@@ -157,6 +276,46 @@ li {
 .mainMenu ul li:hover .servicesSublist ul li {
     display: block;
     padding: 10px;
+    margin-left: -40px;
+}
+
+/* ------------- News Sublist ------------- */
+
+.mainMenu ul li:hover .newsSublist {
+    display: block;
+    position: absolute;
+    margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
+    margin-left: calc(var(--propertiesSublistMarginTop) - 70px);
+}
+
+.mainMenu ul li:hover .newsSublist ul {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .2);
+    width: 150px;
+}
+
+.mainMenu ul li:hover .newsSublist ul li {
+    display: block;
+    padding: 10px;
+    margin-left: -40px;
+}
+
+/* --------- News Last 3 months sublist ----------- */
+
+.newsSublist ul li:hover .last3monthsSublist {
+    display: block;
+    position: absolute;
+    margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
+    margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
+}
+
+/* --------- News Previous Years sublist ----------- */
+
+.newsSublist ul li:hover .previousyearsSublist {
+    display: block;
+    position: absolute;
+    margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
+    margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
 }
 
 /* ------------- About Sublist ----------- */
@@ -164,8 +323,8 @@ li {
 .mainMenu ul li:hover .aboutSublist {
     display: block;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 290px;
+    margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
+    margin-left: calc(var(--propertiesSublistMarginTop) - 70px);
 }
 
 .mainMenu ul li:hover .aboutSublist ul {
@@ -176,32 +335,25 @@ li {
 .mainMenu ul li:hover .aboutSublist ul li {
     display: block;
     padding: 10px;
+    margin-left: -40px;
 }
 
-/*  -------- properties Others Sublist ------ */
+/* --------- Contacts Sublist -------------- */
 
-.propertiesSublist ul li:hover .propertiesOthersSublist {
+.mainMenu ul li:hover .contactSublist {
     display: block;
     position: absolute;
-    margin-top: -50px;
-    margin-left: 95px;
+    margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
+    margin-left: calc(var(--propertiesSublistMarginTop) - 30px);
 }
 
-.propertiesSublist ul li:hover .propertiesOthersSublist  ul {
+.mainMenu ul li:hover .contactSublist ul {
     margin-top: 20px;
     background-color: rgba(0, 0, 0, .2);
-} 
-
-.propertiesSublist ul li:hover .propertiesOthersSublist  ul li {
-    display: block;
-    padding: 10px;
 }
 
-/* --------- News Last 3 months sublist ----------- */
-
-.newsSublist ul li:hover .last3monthsSublist {
+.mainMenu ul li:hover .contactSublist ul li {
     display: block;
-    position: absolute;
-    margin-top: -50px;
-    margin-left: 154px;
+    padding: 10px;
+    margin-left: -40px;
 }

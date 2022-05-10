@@ -1,210 +1,274 @@
 :root {
-    --propertiesSublistMarginTop: 19px;
-    --propertiesSublistMarginLeft: -13px;
+  --propertiesSublistMarginTop: 19px;
+  --propertiesSublistMarginLeft: -13px;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+.companyTitle {
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+li {
+  border: 0.5px solid black;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+.fa-brands {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 20%;
+}
+
+/* .companyTitle {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20%;
+} */
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .logo {
-    border-radius: 20%;
-    margin-left: -10px;
+  border-radius: 50%;
+  margin-left: -10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid white;
 }
 
 .socialSection {
-    display: flex;
-    margin-right: 15px;
+  display: flex;
+  margin-right: 15px;
 }
 
 .social {
-    padding: 10px;
-    font-size: 2rem;
+  padding: 10px;
+  font-size: 2rem;
 }
 
 .moreButton {
-    display: flex;
-    float: right;
+  display: flex;
+  float: right;
 }
 
 .socialSection a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .servicesForm,
 .aboutForm {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-@media only screen and (max-width: 600px) {
-    .mainMenu {
-        display: none;
-    }
+@media only screen and (max-width: 767px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+  }
 
-    .navbar {
-        background-color: rgba(0, 0, 0, .2);
-        display: flex;
-        align-items: center;
-    }
+  .companyTitle {
+    margin-top: 30px;
+    margin-left: 60px;
+  }
 
-    .companyTitle {
-        font-size: 1.5rem;
-    }
+  .logo {
+    position: absolute;
+    margin-top: -160px;
+  }
 
-    .toggle-button {
-        margin-top: 20px;
-    }
+  .mainMenu ul {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 25px;
+  }
 
-    .socialSection {
-        display: none;
-    }
+  .companyTitle {
+    font-size: 1.5rem;
+  }
 
+  /* .toggle-button {
+    margin-top: 20px;
+  } */
+
+  .socialSection {
+    display: none;
+  }
+
+  .lineBreak {
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 600px) {
-    .mainMenu {
-        display: none;
-    }
+/* @media only screen and (min-width: 601px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+  }
 
-    .navbar {
-        background-color: rgba(0, 0, 0, .2);
-        display: flex;
-        align-items: center;
-    }
-
-    .companyTitle {
-        font-size: 1.5rem;
-    }
-
-    .toggle-button {
-        margin-top: 20px;
-    }
-
-    .socialSection {
-        display: none;
-    }
-
-}
+  .companyTitle {
+    font-size: 1.5rem;
+  }
+  .socialSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .lineBreak {
+    display: none;
+  }
+} */
 
 @media only screen and (min-width: 768px) {
-    .mainMenu {
-        display: none;
-    }
-
-    .navbar {
-        background-color: rgba(0, 0, 0, .2);
-        display: flex;
-        align-items: center;
-    }
-
-    .companyTitle {
-        font-size: 1.5rem;
-    }
-
-    .toggle-button {
-        margin-top: 20px;
-    }
-
-    .socialSection {
-        display: block;
-        margin-left: 120px;
-    }
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+  }
+  .companyTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .fa-brands {
+    font-size: 1.5rem;
+  }
+  .socialSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .subNav {
+    margin-left: -90px;
+  }
 }
 
+@media only screen and (min-width: 992px) {
+  /* .mainMenu {
+    display: none;
+  } */
 
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-@media only screen and (min-width: 1003px) {
+  .companyTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 
-    .navbar {
-        background-color: rgba(0, 0, 0, .2);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+  /* .toggle-button {
+    margin-top: 20px;
+  } */
 
-    .companyTitle {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
+  .socialSection {
+    display: block;
+  }
 
-    .mainMenu {
-        font-size: 1rem;
-    }
+  .lineBreak {
+    display: none;
+  }
+  .mainMenu ul li:nth-child(6) {
+    display: inline-block;
+  }
+}
 
-    .toggle {
-        display: none;
-    }
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .mainMenu {
-        display: block;
-    }
+  .companyTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 
-    .lineBreak {
-        display: none;
-    }
+  .mainMenu {
+    font-size: 1rem;
+  }
+
+  /* .toggle {
+    display: none;
+  } */
+
+  .mainMenu {
+    display: block;
+  }
+
+  .lineBreak {
+    display: none;
+  }
 }
 
 .mainMenu {
-    margin-bottom: -10px;
+  margin-bottom: -10px;
 }
 
 .mainMenu ul {
-    margin: 3px;
-    margin-bottom: -12px;
+  margin: 3px;
+  margin-bottom: -12px;
 }
 
 .mainMenu ul li {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    padding: 10px 12px;
-    text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 12px;
+  text-align: center;
 }
 
 .active {
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
 }
 
 .mainMenu ul li:hover {
-    background-color: rgba(0, 0, 0, .5);
-    cursor: pointer;
-    border-radius: 10%;
-    transition: all 0.4s ease-in;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 10%;
+  transition: all 0.4s ease-in;
 }
 
-.toggle-button {
-    position: absolute;
-    top: 1.7rem;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
+/* .toggle-button {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+} */
 
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10px;
-}
+/* .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+} */
 
 .propertiesSublist,
 .servicesSublist,
@@ -213,147 +277,147 @@ a {
 .previousyearsSublist,
 .aboutSublist,
 .contactSublist {
-    display: none;
+  display: none;
 }
 
 .propertiesOthersSublist {
-    display: none;
+  display: none;
 }
 
 /* ---------- Properties Sublist ---------- */
 
 .mainMenu ul li:hover .propertiesSublist {
-    display: block;
-    position: absolute;
+  display: block;
+  position: absolute;
 }
 
 .mainMenu ul li:hover .propertiesSublist ul {
-    margin-top: var(--propertiesSublistMarginTop);
-    margin-left: var(--propertiesSublistMarginLeft);
-    background-color: rgba(0, 0, 0, .2);
-    width: 100px;
+  margin-top: var(--propertiesSublistMarginTop);
+  margin-left: var(--propertiesSublistMarginLeft);
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100px;
 }
 
 .mainMenu ul li:hover .propertiesSublist ul li {
-    display: block;
-    padding: 10px;
-    margin-left: -40px;
+  display: block;
+  padding: 10px;
+  margin-left: -40px;
 }
 
 /*  -------- properties Others Sublist ------ */
 
 .propertiesSublist ul li:hover .propertiesOthersSublist {
-    display: block;
-    position: absolute;
-    margin-left: calc(var(--propertiesSublistMarginLeft) + 116px);
-    margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
+  display: block;
+  position: absolute;
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 116px);
+  margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
 }
 
 .propertiesSublist ul li:hover .propertiesOthersSublist ul {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .2);
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .propertiesSublist ul li:hover .propertiesOthersSublist ul li {
-    display: block;
-    padding: 10px;
+  display: block;
+  padding: 10px;
 }
 
 /* ------ Services Sublist ----------- */
 
 .mainMenu ul li:hover .servicesSublist {
-    display: block;
-    position: absolute;
-    margin-left: calc(var(--propertiesSublistMarginLeft) - 60px);
-    margin-top: calc(var(--propertiesSublistMarginTop) - 20px);
+  display: block;
+  position: absolute;
+  margin-left: calc(var(--propertiesSublistMarginLeft) - 60px);
+  margin-top: calc(var(--propertiesSublistMarginTop) - 20px);
 }
 
 .mainMenu ul li:hover .servicesSublist ul {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .2);
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mainMenu ul li:hover .servicesSublist ul li {
-    display: block;
-    padding: 10px;
-    margin-left: -40px;
+  display: block;
+  padding: 10px;
+  margin-left: -40px;
 }
 
 /* ------------- News Sublist ------------- */
 
 .mainMenu ul li:hover .newsSublist {
-    display: block;
-    position: absolute;
-    margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
-    margin-left: calc(var(--propertiesSublistMarginTop) - 70px);
+  display: block;
+  position: absolute;
+  margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
+  margin-left: calc(var(--propertiesSublistMarginTop) - 70px);
 }
 
 .mainMenu ul li:hover .newsSublist ul {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .2);
-    width: 150px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 150px;
 }
 
 .mainMenu ul li:hover .newsSublist ul li {
-    display: block;
-    padding: 10px;
-    margin-left: -40px;
+  display: block;
+  padding: 10px;
+  margin-left: -40px;
 }
 
 /* --------- News Last 3 months sublist ----------- */
 
 .newsSublist ul li:hover .last3monthsSublist {
-    display: block;
-    position: absolute;
-    margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
-    margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
+  display: block;
+  position: absolute;
+  margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
 }
 
 /* --------- News Previous Years sublist ----------- */
 
 .newsSublist ul li:hover .previousyearsSublist {
-    display: block;
-    position: absolute;
-    margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
-    margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
+  display: block;
+  position: absolute;
+  margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
 }
 
 /* ------------- About Sublist ----------- */
 
 .mainMenu ul li:hover .aboutSublist {
-    display: block;
-    position: absolute;
-    margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
-    margin-left: calc(var(--propertiesSublistMarginTop) - 70px);
+  display: block;
+  position: absolute;
+  margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
+  margin-left: calc(var(--propertiesSublistMarginTop) - 70px);
 }
 
 .mainMenu ul li:hover .aboutSublist ul {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .2);
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mainMenu ul li:hover .aboutSublist ul li {
-    display: block;
-    padding: 10px;
-    margin-left: -40px;
+  display: block;
+  padding: 10px;
+  margin-left: -40px;
 }
 
 /* --------- Contacts Sublist -------------- */
 
 .mainMenu ul li:hover .contactSublist {
-    display: block;
-    position: absolute;
-    margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
-    margin-left: calc(var(--propertiesSublistMarginTop) - 30px);
+  display: block;
+  position: absolute;
+  margin-top: calc(var(--propertiesSublistMarginLeft) + 12px);
+  margin-left: calc(var(--propertiesSublistMarginTop) - 30px);
 }
 
 .mainMenu ul li:hover .contactSublist ul {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .2);
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mainMenu ul li:hover .contactSublist ul li {
-    display: block;
-    padding: 10px;
-    margin-left: -40px;
+  display: block;
+  padding: 10px;
+  margin-left: -40px;
 }

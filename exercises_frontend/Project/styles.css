@@ -11,21 +11,51 @@
 
 .companyTitle {
   text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  margin-top: -1rem;
 }
 
-li {
+.navbar {
+  background-color: #f6b319;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainMenu {
+  margin-bottom: -12px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2rem;
+  margin-right: 2rem;
+}
+
+.mainMenu ul {
+  margin: 3px;
+  margin-bottom: -12px;
+}
+
+.mainMenu ul li {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 12px;
+  text-align: center;
+  border-radius: 80%;
+  background-color: rgb(160, 155, 155);
   border: 0.5px solid black;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-right: 1rem;
 }
+
 .fa-brands {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
   border-radius: 20%;
 }
-
-/* .companyTitle {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 20%;
-} */
 
 body {
   margin: 0;
@@ -71,9 +101,8 @@ a {
   color: black;
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     padding-bottom: 30px;
@@ -100,41 +129,17 @@ a {
     font-size: 1.5rem;
   }
 
-  /* .toggle-button {
-    margin-top: 20px;
-  } */
-
   .socialSection {
     display: none;
   }
 
-  .lineBreak {
-    display: none;
-  }
-}
-
-/* @media only screen and (min-width: 601px) {
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-  }
-
-  .companyTitle {
-    font-size: 1.5rem;
-  }
-  .socialSection {
-    display: flex;
-    flex-direction: column;
-  }
   .lineBreak {
     display: none;
   }
 } */
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
   }
@@ -157,15 +162,10 @@ a {
   .subNav {
     margin-left: -90px;
   }
-}
+} */
 
-@media only screen and (min-width: 992px) {
-  /* .mainMenu {
-    display: none;
-  } */
-
+/* @media only screen and (min-width: 992px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -177,10 +177,6 @@ a {
     text-align: center;
   }
 
-  /* .toggle-button {
-    margin-top: 20px;
-  } */
-
   .socialSection {
     display: block;
   }
@@ -191,11 +187,18 @@ a {
   .mainMenu ul li:nth-child(6) {
     display: inline-block;
   }
-}
+  .mainMenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainMenu {
+    margin-top: -1.5rem;
+  }
+} */
 
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   .navbar {
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -208,36 +211,20 @@ a {
 
   .mainMenu {
     font-size: 1rem;
-  }
-
-  /* .toggle {
-    display: none;
-  } */
-
-  .mainMenu {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.5rem;
+    margin-right: 2rem;
   }
 
   .lineBreak {
     display: none;
   }
-}
+} */
 
-.mainMenu {
-  margin-bottom: -10px;
-}
-
-.mainMenu ul {
-  margin: 3px;
-  margin-bottom: -12px;
-}
-
-.mainMenu ul li {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  padding: 10px 12px;
-  text-align: center;
+.lineBreak {
+  display: none;
 }
 
 .active {
@@ -248,27 +235,9 @@ a {
 .mainMenu ul li:hover {
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  border-radius: 10%;
-  transition: all 0.4s ease-in;
+  border-radius: 0.5%;
+  transition: all 0.2s ease-in;
 }
-
-/* .toggle-button {
-  position: absolute;
-  top: 1.7rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-} */
-
-/* .toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  border-radius: 10px;
-} */
 
 .propertiesSublist,
 .servicesSublist,
@@ -293,8 +262,8 @@ a {
 
 .mainMenu ul li:hover .propertiesSublist ul {
   margin-top: var(--propertiesSublistMarginTop);
-  margin-left: var(--propertiesSublistMarginLeft);
-  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 8px);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   width: 100px;
 }
 
@@ -302,6 +271,7 @@ a {
   display: block;
   padding: 10px;
   margin-left: -40px;
+  margin-top: 0.3rem;
 }
 
 /*  -------- properties Others Sublist ------ */
@@ -309,18 +279,19 @@ a {
 .propertiesSublist ul li:hover .propertiesOthersSublist {
   display: block;
   position: absolute;
-  margin-left: calc(var(--propertiesSublistMarginLeft) + 116px);
-  margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 96px);
+  margin-top: calc(var(--propertiesSublistMarginTop) - 81px);
 }
 
 .propertiesSublist ul li:hover .propertiesOthersSublist ul {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .propertiesSublist ul li:hover .propertiesOthersSublist ul li {
   display: block;
   padding: 10px;
+  margin-top: 0.3rem;
 }
 
 /* ------ Services Sublist ----------- */
@@ -334,13 +305,14 @@ a {
 
 .mainMenu ul li:hover .servicesSublist ul {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .mainMenu ul li:hover .servicesSublist ul li {
   display: block;
   padding: 10px;
   margin-left: -40px;
+  border-radius: 0.5%;
 }
 
 /* ------------- News Sublist ------------- */
@@ -354,7 +326,7 @@ a {
 
 .mainMenu ul li:hover .newsSublist ul {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   width: 150px;
 }
 
@@ -362,6 +334,7 @@ a {
   display: block;
   padding: 10px;
   margin-left: -40px;
+  margin-top: 0.3rem;
 }
 
 /* --------- News Last 3 months sublist ----------- */
@@ -369,8 +342,8 @@ a {
 .newsSublist ul li:hover .last3monthsSublist {
   display: block;
   position: absolute;
-  margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
-  margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
+  margin-top: calc(var(--propertiesSublistMarginTop) - 81px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 138px);
 }
 
 /* --------- News Previous Years sublist ----------- */
@@ -378,8 +351,8 @@ a {
 .newsSublist ul li:hover .previousyearsSublist {
   display: block;
   position: absolute;
-  margin-top: calc(var(--propertiesSublistMarginTop) - 68px);
-  margin-left: calc(var(--propertiesSublistMarginLeft) + 150px);
+  margin-top: calc(var(--propertiesSublistMarginTop) - 81px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 138px);
 }
 
 /* ------------- About Sublist ----------- */
@@ -393,13 +366,14 @@ a {
 
 .mainMenu ul li:hover .aboutSublist ul {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .mainMenu ul li:hover .aboutSublist ul li {
   display: block;
   padding: 10px;
   margin-left: -40px;
+  border-radius: 0.5%;
 }
 
 /* --------- Contacts Sublist -------------- */
@@ -413,11 +387,12 @@ a {
 
 .mainMenu ul li:hover .contactSublist ul {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .mainMenu ul li:hover .contactSublist ul li {
   display: block;
   padding: 10px;
   margin-left: -40px;
+  margin-top: 0.3rem;
 }

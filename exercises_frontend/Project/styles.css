@@ -21,7 +21,7 @@ header {
 }
 
 main {
-  margin-top: 116px;
+  margin-top: 115px;
 }
 
 .companyTitle {
@@ -261,7 +261,6 @@ a {
   background-color: #b40012;
   /* color: white; */
   cursor: pointer;
-  border-radius: 0.5%;
   transition: all 0.2s ease-in;
 }
 
@@ -305,7 +304,7 @@ a {
 .propertiesSublist ul li:hover .propertiesOthersSublist {
   display: block;
   position: absolute;
-  margin-left: calc(var(--propertiesSublistMarginLeft) + 96px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 94px);
   margin-top: calc(var(--propertiesSublistMarginTop) - 81px);
 }
 
@@ -369,7 +368,7 @@ a {
   display: block;
   position: absolute;
   margin-top: calc(var(--propertiesSublistMarginTop) - 81px);
-  margin-left: calc(var(--propertiesSublistMarginLeft) + 138px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 135px);
 }
 
 /* --------- News Previous Years sublist ----------- */
@@ -378,7 +377,7 @@ a {
   display: block;
   position: absolute;
   margin-top: calc(var(--propertiesSublistMarginTop) - 81px);
-  margin-left: calc(var(--propertiesSublistMarginLeft) + 138px);
+  margin-left: calc(var(--propertiesSublistMarginLeft) + 135px);
 }
 
 /* ------------- About Sublist ----------- */
